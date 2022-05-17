@@ -2,17 +2,21 @@
 <html>
 <body>
 
-<p>Press and hold down a key inside the text field to set a red background color. Release the key to set a green background color.</p>
+<p>test DW Keyevent.</p>
 
-<input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+<input id="yourinput" type="text" />
 
-<script>
-function keydownFunction() {
-  document.getElementById("demo").style.backgroundColor = "red";
-}
+<script type="text/javascript">
+document.getElementById("yourinput").addEventListener("onkeydown", keyDownTextField, false);
 
-function keyupFunction() {
-  document.getElementById("demo").style.backgroundColor = "green";
+function keyDownTextField() {
+alert("functional");    
+if(keycode==13) {
+        alert("You hit the enter key.");
+    }
+    else{
+        alert("Oh no you didn't.");
+    }
 }
 </script>
 
