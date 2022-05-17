@@ -7,9 +7,10 @@
 <input id="yourinput" type="text" />
 
 <script type="text/javascript">
-document.getElementById("yourinput").addEventListener("onkeydown", keyDownTextField, false);
+document.getElementById("yourinput").addEventListener("keydown", keyDownTextField, false);
 
-function keyDownTextField() {
+function keyDownTextField (e) {
+  var keyCode = e.keyCode;
 alert("functional");    
 if(keycode==13) {
         alert("You hit the enter key.");
